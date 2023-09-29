@@ -17,7 +17,7 @@ struct HomeRowView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             MealRemoteImage(urlString: category.imageURL)
-                .frame(width: width, height: 148)
+                .frame(height: 140)
                 .cornerRadius(20)
                 
             Text(category.name)

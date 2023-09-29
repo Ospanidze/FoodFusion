@@ -20,36 +20,57 @@ struct DishView: View {
     ]
     
     var body: some View {
+        
         ZStack {
-            NavigationView {
-                ScrollView {
+            VStack {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(Teg.allCases, id: \.self) { item in
+                            ButtonTegView(
+                                action: {viewModel.filterDishes(item: item)},
+                                title: item.rawValue)
+                        }
+                    }
+                }
+                .padding(.top, 20)
+                .padding(.leading, 12)
+                
+                Spacer(minLength: 20)
+                
+                ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: columns) {
-                        ForEach(viewModel.dishes) { dish in
+                        ForEach(viewModel.displayedDishes) { dish in
                             DishItemView(dish: dish)
                                 .onTapGesture {
                                     viewModel.selectedDish = dish
-                                    viewModel.isShowDetail = true
+                                    viewModel.isShowDetail.toggle()
                                 }
                         }
                     }
                 }
-                .navigationTitle(title)
-                .navigationBarTitleDisplayMode(.inline)
-                .disabled(viewModel.isShowDetail)
             }
+            .disabled(viewModel.isShowDetail)
             .onAppear {
                 viewModel.getDishes()
             }
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
             .blur(radius: viewModel.isShowDetail ? 20 : 0)
             
-            if viewModel.isShowDetail {
-                DetailView(
-                    isShowingDetail: $viewModel.isShowDetail,
-                    dish: viewModel.selectedDish ?? MockData.sampleDish
-                )
+           
+            VStack {
+                if viewModel.isShowDetail {
+                    DetailView(
+                        isShowingDetail: $viewModel.isShowDetail,
+                        dish: viewModel.selectedDish ?? MockData.sampleDish
+                    )
+                    .transition(.scale)
+                }
             }
         }
+       .animation(.spring(), value: viewModel.isShowDetail)
     }
+       
 }
 
 struct DishView_Previews: PreviewProvider {

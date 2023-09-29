@@ -28,6 +28,9 @@ enum Tab: String {
 }
 
 struct ContentView: View {
+    
+    @EnvironmentObject private var order: Order
+    
     var body: some View {
         TabView {
             NavigationView {
@@ -53,6 +56,7 @@ struct ContentView: View {
                 Image(systemName: Tab.basket.image)
                 Text(Tab.basket.rawValue)
             }
+            .badge(order.items.count)
             NavigationView {
                 AccountView()
             }

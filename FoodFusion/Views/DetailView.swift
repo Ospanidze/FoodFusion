@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
     
     @Binding var isShowingDetail: Bool
+    @EnvironmentObject private var order: Order
     
     let dish: Dish
     private let width = UIScreen.main.bounds.width - 32
@@ -69,11 +70,16 @@ struct DetailView: View {
                         .frame(height: 130, alignment: .topLeading)
                 }
                 
-                BlueButtonView(action: {}, title: "Добавить в корзину")
+                BlueButtonView(
+                    action: {
+                        order.add(dish)
+                        isShowingDetail.toggle()
+                    },
+                    title: "Добавить в корзину"
+                )
             }
         }
         .padding()
-        
     }
 }
 

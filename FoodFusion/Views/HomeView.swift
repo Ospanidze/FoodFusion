@@ -12,27 +12,26 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
-        ZStack {
-            NavigationView {
-                List(viewModel.categories) { category in
-                    NavigationLink(destination: DishView(title: category.name)) {
-                        HomeRowView(category: category)
-//                            .listRowSeparator(.visible)
-//                            .listRowSeparatorTint(.clear)
-                    }
-                }
-                .listStyle(.plain)
-                .onAppear {
-                    viewModel.getCategories()
-                }
-                .navigationBarItems(
-                    leading: LeftNavView(imageName: "house", cityName: "Astana", date: "12 aug, 2023"),
-                    trailing: Image(systemName: "gearshape.fill")
-                )
+        List(viewModel.categories) { category in
+            NavigationLink(destination: DishView(title: category.name)) {
+                HomeRowView(category: category)
             }
         }
+//        .listRowSeparatorTint(.red)
+//        .listRowSeparator(.hidden)
+        .listStyle(.plain)
+        .onAppear {
+            viewModel.getCategories()
+        }
+        .navigationBarItems(
+            leading: LeftNavView(imageName: "place", cityName: "Astana", date: "12 aug, 2023"),
+            trailing: Image("girl")
+                .resizable()
+            
+        )
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
@@ -47,8 +46,8 @@ struct LeftNavView: View {
     
     var body: some View {
         HStack {
-            Image(systemName: imageName)
-            VStack {
+            Image(imageName)
+            VStack(alignment: .leading) {
                 Text(cityName)
                     .font(.system(size: 16, weight: .heavy))
                 

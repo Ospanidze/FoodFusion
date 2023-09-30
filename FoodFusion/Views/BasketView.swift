@@ -41,7 +41,7 @@ struct BasketView: View {
             
             if order.items.isEmpty {
                 EmptyState(
-                    imageName: "order",
+                    imageName: "empty",
                     message: "You have no items in your order.\nPlease add an appetizer!"
                 )
             }

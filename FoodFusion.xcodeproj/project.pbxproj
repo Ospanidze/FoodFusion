@@ -21,6 +21,8 @@
 		EF8DF0B22AC583AA00BF928C /* BasketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DF0B12AC583AA00BF928C /* BasketRowView.swift */; };
 		EF8DF0B42AC6E6C600BF928C /* ButtonTegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DF0B32AC6E6C600BF928C /* ButtonTegView.swift */; };
 		EF8DF0B62AC6F94B00BF928C /* EmptyStare.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DF0B52AC6F94B00BF928C /* EmptyStare.swift */; };
+		EF8DF0B82AC7F0EE00BF928C /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DF0B72AC7F0EE00BF928C /* TabShape.swift */; };
+		EF8DF0BA2AC7F3F200BF928C /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DF0B92AC7F3F200BF928C /* TabPosition.swift */; };
 		EFDEAA9A2A8E0BF800717C9C /* HomeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEAA992A8E0BF800717C9C /* HomeRowView.swift */; };
 		EFDEAA9D2A8EA43700717C9C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEAA9C2A8EA43700717C9C /* Meal.swift */; };
 		EFDEAAA02A8EA4A800717C9C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEAA9F2A8EA4A800717C9C /* NetworkManager.swift */; };
@@ -49,6 +51,8 @@
 		EF8DF0B12AC583AA00BF928C /* BasketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRowView.swift; sourceTree = "<group>"; };
 		EF8DF0B32AC6E6C600BF928C /* ButtonTegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTegView.swift; sourceTree = "<group>"; };
 		EF8DF0B52AC6F94B00BF928C /* EmptyStare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStare.swift; sourceTree = "<group>"; };
+		EF8DF0B72AC7F0EE00BF928C /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
+		EF8DF0B92AC7F3F200BF928C /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 		EFDEAA992A8E0BF800717C9C /* HomeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRowView.swift; sourceTree = "<group>"; };
 		EFDEAA9C2A8EA43700717C9C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		EFDEAA9F2A8EA4A800717C9C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		EF8DF09E2AC531A400BF928C /* Extansions */ = {
 			isa = PBXGroup;
 			children = (
+				EF8DF0B92AC7F3F200BF928C /* TabPosition.swift */,
 			);
 			path = Extansions;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				EF8DF0AE2AC5830B00BF928C /* Research */,
 				EF8DF0AF2AC5831700BF928C /* Basket */,
 				EF8DF0B02AC5832000BF928C /* Account */,
+				EF8DF0B72AC7F0EE00BF928C /* TabShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				EF8DF0A42AC53E8F00BF928C /* DishViewModel.swift in Sources */,
 				EF8DF0A22AC5371400BF928C /* Food.swift in Sources */,
 				EFDEAAA02A8EA4A800717C9C /* NetworkManager.swift in Sources */,
+				EF8DF0B82AC7F0EE00BF928C /* TabShape.swift in Sources */,
 				EFDEAA9A2A8E0BF800717C9C /* HomeRowView.swift in Sources */,
 				EF8DF0A02AC5360F00BF928C /* DishVIew.swift in Sources */,
 				EFF031372A8D500100E47581 /* BasketView.swift in Sources */,
@@ -307,6 +314,7 @@
 				EFF031352A8D4FF600E47581 /* ResearchView.swift in Sources */,
 				EFDEAA9D2A8EA43700717C9C /* Meal.swift in Sources */,
 				EF8DF0992AC5174F00BF928C /* MealRemoteImage.swift in Sources */,
+				EF8DF0BA2AC7F3F200BF928C /* TabPosition.swift in Sources */,
 				EFF031392A8D501200E47581 /* AccountView.swift in Sources */,
 				EFF031222A8D4F5500E47581 /* FoodFusionApp.swift in Sources */,
 				EF8DF0A82AC552CA00BF928C /* BlueButtonView.swift in Sources */,
@@ -446,8 +454,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,9 +464,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OA.FoodFusion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -476,8 +487,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,9 +497,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OA.FoodFusion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
